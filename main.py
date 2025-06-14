@@ -1,26 +1,17 @@
-L = [4, 5, 1, 2, 9, 7, 10, 8]
-print("Original List :", L)
+# function to check whether palindrome or not
+def palind(r):
+    e = len(r) - 1
+    s = 0
+    while(s<=e):
+        if(r[s]!=r[e]):
+            return False
+        s+=1
+        e-=1
+    return True
 
-# variable to store the sum of
-# the list
-count = 0
+r = (1,2,3,3,3,2,1)
 
-# Finding the sum
-for i in L:
-    count += i
-
-# divide the total elements by
-# number of elements
-avg = count/len(L)
-
-print("sum = ", count)
-print("average = ", avg)
-
-# Sorting the elements of the list
-L.sort()
-
-# printing the first element
-print("Smallest element is:", L[0])
-
-# printing the last element
-print("Largest element is:", L[-1])
+if(palind(r)):
+    print("The Tuple is Flip-Flop")
+else:
+    print("The Tuple is not Flip-Flop")
